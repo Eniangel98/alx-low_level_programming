@@ -1,31 +1,34 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * main - Entyr point
- * Description: prints two digits combination
- * Resturn: Always 0 (success)
+ * main - entry point
+ * Description: prints all possible different combinations of two digits
+ * Return: 0 (Correct)
  */
 int main(void)
 {
-	int c, i;
+	int i, j;
 
-	for (c = '0'; c <= '9'; c++)
+	i = 48;
+	j = 48;
+
+	while (i < 58)
 	{
-		for (i = '0'; i <= '9'; i++)
+		j = i + 1;
+		while (j < 58)
 		{
-			if (c < i)
-			{
-				putchar(c);
-				putchar(i);
+			putchar(i);
+			putchar(j);
 
-				if (c != '8' || (c == '8' && i != '9'))
-				{
-					putchar(',');
-					putchar('');
-				}
+			if (i < 56 || j < 57)
+			{
+				putchar(44);
+				putchar(32);
 			}
+			j++;
 		}
+		i++;
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
