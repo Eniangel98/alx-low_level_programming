@@ -2,7 +2,7 @@
 
 /**
  * main - print _putchar
- * is written by beatrice
+ * is written by bwave
  * Return: 0
  */
 
